@@ -1,7 +1,6 @@
-import { FC } from "react";
-import { Personaje } from "../types";
 
-const TarjetaPersonaje: FC<Personaje> = ({ image, nombre, especie, episode }) =>{
+
+const TarjetaPersonaje = ({ image, nombre, especie, episode }) =>{
     const numeroEpisodios = episode.length + 1
 
     return  (

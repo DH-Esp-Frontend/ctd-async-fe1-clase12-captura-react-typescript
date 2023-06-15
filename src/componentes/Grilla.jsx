@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
-import { APIresponse, Personajes } from "../types";
 import TarjetaPersonaje from "./TarjetaPersonaje";
 
 
 export const obtenerPersonajes = async () => {
     const res = await fetch("https://rickandmortyapi.com/api/character");
-    const data: APIresponse = await res.json();
+    const data = await res.json();
   
     return data;
   };
 
 
 const Grilla = () => {
-  const [personajes, setPersonajes] = useState<Personajes|[]>([])
+  const [personajes, setPersonajes] = useState([])
 
   useEffect(() => {
     obtenerPersonajes()
